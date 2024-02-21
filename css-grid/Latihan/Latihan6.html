@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | Grid Template Areas</title>
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+      grid-template-areas:
+        "header header header"
+        "sidebar content content"
+        "sidebar content content"
+        "footer footer footer";
+    }
+
+    .item {
+      background-color: cadetblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px;
+      box-sizing: border-box;
+    }
+
+    /* .item:nth-child(even) {
+      background-color: crimson;
+    } */
+
+    .header {
+      grid-area: header;
+      background-color: coral;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: cornflowerblue;
+    }
+
+    .content {
+      grid-area: content;
+      background-color: crimson;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: darkgray;
+    }
+
+    /* Responsive Breakpoint */
+    @media screen and (min-width: 576px) {
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+          "header header header"
+          "sidebar content content"
+          "sidebar content content"
+          "footer footer footer";
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item header">Header</div>
+      <div class="item sidebar">Sidebar</div>
+      <div class="item content">Content</div>
+      <div class="item footer">Footer</div>
+    </div>
+  </body>
+</html>

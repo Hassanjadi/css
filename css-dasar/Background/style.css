@@ -1,0 +1,8 @@
+body {
+  background-color: #999999;
+  background-image: url(image/image2.jpg);
+  /*background-repeat: repeat-x, repeat-y, no-repeat;*/
+  background-position: top/center/bottom left/center/right;
+
+  /*background: color url() position repeat*/
+}
